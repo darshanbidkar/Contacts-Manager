@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Contacts Manager</string>
+    <string name="action_add">Add</string>
+    <string name="contact_firsName">First Name</string>
+    <string name="contact_lastName">Last Name</string>
+    <string name="contact_phone">Phone Number</string>
+    <string name="contact_emailId">Email Id</string>
+    <string name="contact_dateAdded">Date Added</string>
+    <string name="contact_save">Save</string>
+    <string name="new_contact">Add a new contact</string>
+</resources>
