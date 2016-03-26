@@ -61,6 +61,25 @@ public class ContactModel implements Parcelable {
                 append(mDateAdded).toString();
     }
 
+    public boolean isEqual(ContactModel contactModel) {
+        if (!this.mFirstName.equalsIgnoreCase(contactModel.getmFirstName())) {
+            return false;
+        }
+        if (!this.mLastName.equalsIgnoreCase(contactModel.getmLastName())) {
+            return false;
+        }
+        if (!this.mEmailId.equalsIgnoreCase(contactModel.getmEmailId())) {
+            return false;
+        }
+        if (!this.mDateAdded.equalsIgnoreCase(contactModel.getmDateAdded())) {
+            return false;
+        }
+        if (!this.mPhone.equalsIgnoreCase(contactModel.getmPhone())) {
+            return false;
+        }
+
+        return true;
+    }
     public String getmFirstName() {
         return mFirstName;
     }
