@@ -44,7 +44,7 @@ public class AddContactActivity extends AppCompatActivity {
         mEmailId = (EditText) findViewById(R.id.new_emailid);
         mDateAdded = (TextView) findViewById(R.id.new_dateAdded);
         mainScrollView = (ScrollView)findViewById(R.id.scrollView);
-        mainScrollView.smoothScrollTo(0,0);
+        mainScrollView.smoothScrollTo(0, 0);
         contacts = getIntent().getParcelableArrayListExtra("contacts");
         model = getIntent().getExtras().getParcelable("contact");
 
@@ -92,6 +92,9 @@ public class AddContactActivity extends AppCompatActivity {
                         setPositiveButton("YES", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // continue with delete
+                                contacts.remove(model);
+                                DataHandler.getInstance().writeEntries(getApplicationContext(), contacts);
+                                finish();
                             }
                         }).setNegativeButton("NO", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
