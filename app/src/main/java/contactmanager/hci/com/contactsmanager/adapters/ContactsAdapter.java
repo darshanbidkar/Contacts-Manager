@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ import contactmanager.hci.com.contactsmanager.model.ContactModel;
  */
 public class ContactsAdapter extends ArrayAdapter<ContactModel> {
 
-
+    Context context;
     private static class ViewHolder {
         TextView mName;
         TextView mPhone;
@@ -25,6 +26,7 @@ public class ContactsAdapter extends ArrayAdapter<ContactModel> {
 
     public ContactsAdapter(Context context, int resource, List objects) {
         super(context, resource, objects);
+        this.context = context;
     }
 
     @Override
@@ -43,6 +45,7 @@ public class ContactsAdapter extends ArrayAdapter<ContactModel> {
 
         viewHolder.mName.setText(currentEntry.getmFirstName() + " " + currentEntry.getmLastName());
         viewHolder.mPhone.setText(currentEntry.getmPhone());
+
 
         return convertView;
     }

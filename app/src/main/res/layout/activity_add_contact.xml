@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/scrollView"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -68,6 +69,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
-            android:text="@string/contact_save" />
+            android:text="@string/contact_save"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/new_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="EDIT"
+            android:visibility="visible"/>
+        <Button
+            android:id="@+id/new_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="DELETE"
+            android:visibility="visible"/>
     </LinearLayout>
 </ScrollView>

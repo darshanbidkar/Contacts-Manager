@@ -34,6 +34,7 @@ public class AllContactsActivity extends AppCompatActivity {
         mContactsView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_LONG).show();
                 ContactModel selectedContact = mContacts.get((int) id);
                 Intent intent = new Intent(getApplicationContext(), AddContactActivity.class);
                 intent.putParcelableArrayListExtra("contacts", mContacts);
