@@ -60,7 +60,12 @@ public class AddContactActivity extends AppCompatActivity {
                 if (model == null) {
                     model = new ContactModel();
                 } else {
-                    contacts.remove(model);
+                    for (int i = 0; i < contacts.size(); i++) {
+                        if (contacts.get(i).isEqual(model)) {
+                            contacts.remove(i);
+                            break;
+                        }
+                    }
                 }
                 model.setmFirstName(mFirstName.getText().toString());
                 model.setmLastName(mLastName.getText().toString());
@@ -92,7 +97,12 @@ public class AddContactActivity extends AppCompatActivity {
                         setPositiveButton("YES", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // continue with delete
-                                contacts.remove(model);
+                                for (int i = 0; i < contacts.size(); i++) {
+                                    if (contacts.get(i).isEqual(model)) {
+                                        contacts.remove(i);
+                                        break;
+                                    }
+                                }
                                 DataHandler.getInstance().writeEntries(getApplicationContext(), contacts);
                                 finish();
                             }
