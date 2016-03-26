@@ -7,21 +7,31 @@ import android.view.ViewParent;
 import android.widget.DatePicker;
 
 /**
- * Created by darshanbidkar on 3/21/16.
+ * Created by darshan bidkar and darshan reddy on 3/21/16.
  */
 public class CustomDatePicker extends DatePicker {
     public CustomDatePicker(Context context) {
         super(context);
     }
 
+    /*
+    *
+    * @author: darshan reddy
+    * */
     public CustomDatePicker(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
-
+    /*
+    *
+    * @author: darshan reddy
+    * */
     public CustomDatePicker(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
-
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         if (ev.getActionMasked() == MotionEvent.ACTION_DOWN) {

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import contactmanager.hci.com.contactsmanager.model.ContactModel;
 
 /**
- * Created by darshanbidkar on 3/21/16.
+ * Created by darshan bidkar and darshan reddy on 3/21/16.
  */
 public class DataHandler {
     private static DataHandler sDataHandler;
@@ -21,14 +21,20 @@ public class DataHandler {
     private DataHandler() {
 
     }
-
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     public synchronized static DataHandler getInstance() {
         if (sDataHandler == null) {
             sDataHandler = new DataHandler();
         }
         return sDataHandler;
     }
-
+    /*
+    *
+    * @author: darshan reddy
+    * */
     public void writeEntries(Context context, ArrayList<ContactModel> entries) {
         try {
             File dataFile = new File(context.getFilesDir(), "contacts.txt");
@@ -47,7 +53,10 @@ public class DataHandler {
             e.printStackTrace();
         }
     }
-
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     public ArrayList<ContactModel> getEntries(Context context) {
         ArrayList<ContactModel> contacts = new ArrayList<>();
         try {

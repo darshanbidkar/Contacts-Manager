@@ -19,7 +19,7 @@ import contactmanager.hci.com.contactsmanager.model.ContactModel;
 import contactmanager.hci.com.contactsmanager.widgets.CustomDatePicker;
 
 /**
- * Created by darshanbidkar on 3/21/16.
+ * Created by darshan bidkar and darshan reddy on 3/21/16.
  */
 public class AddContactActivity extends AppCompatActivity {
 
@@ -32,7 +32,10 @@ public class AddContactActivity extends AppCompatActivity {
     private ContactModel model;
     private Button mDeleteButton;
     private ScrollView mainScrollView;
-
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,7 +117,10 @@ public class AddContactActivity extends AppCompatActivity {
             }
         });
     }
-
+    /*
+    *
+    * @author: darshan reddy
+    * */
     private void populate(ContactModel contactModel) {
         if (contactModel == null) {
             mSaveButton.setVisibility(View.VISIBLE);
@@ -138,7 +144,10 @@ public class AddContactActivity extends AppCompatActivity {
                 Integer.valueOf(dateSplit[1]), mOnDateChangedListener);
         setEditable(false);
     }
-
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     public void setEditable(boolean what){
         mFirstName.setFocusable(what);
         mLastName.setFocusable(what);
@@ -161,6 +170,10 @@ public class AddContactActivity extends AppCompatActivity {
 
 
     }
+    /*
+    *
+    * @author: darshan reddy
+    * */
     private final DatePicker.OnDateChangedListener mOnDateChangedListener = new DatePicker.OnDateChangedListener() {
         @Override
         public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {

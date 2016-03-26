@@ -15,13 +15,19 @@ import java.util.ArrayList;
 import contactmanager.hci.com.contactsmanager.adapters.ContactsAdapter;
 import contactmanager.hci.com.contactsmanager.datahandler.DataHandler;
 import contactmanager.hci.com.contactsmanager.model.ContactModel;
-
+/**
+ * Created by darshan bidkar and darshan reddy on 3/20/16.
+ */
 public class AllContactsActivity extends AppCompatActivity {
 
     private ListView mContactsView;
     private ContactsAdapter mContactsAdapter;
     private ArrayList<ContactModel> mContacts;
 
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +52,10 @@ public class AllContactsActivity extends AppCompatActivity {
         });
         mContactsView.setAdapter(mContactsAdapter);
     }
-
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     @Override
     protected void onResume() {
         super.onResume();
@@ -55,6 +64,10 @@ public class AllContactsActivity extends AppCompatActivity {
         mContactsAdapter.addAll(mContacts);
         mContactsAdapter.notifyDataSetChanged();
     }
+    /*
+    *
+    * @author: darshan bidkar
+    * */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -63,6 +76,10 @@ public class AllContactsActivity extends AppCompatActivity {
         return true;
     }
 
+    /*
+    *
+    * @author: darshan reddy
+    * */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();

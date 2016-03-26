@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by darshanbidkar on 3/20/16.
+ * Created by darshan bidkar and darshan reddy on 3/20/16.
  */
 public class ContactModel implements Parcelable {
     private String mFirstName;
@@ -12,7 +12,10 @@ public class ContactModel implements Parcelable {
     private String mPhone;
     private String mEmailId;
     private String mDateAdded;
-
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     public static final Creator<ContactModel> CREATOR = new Creator<ContactModel>() {
         @Override
         public ContactModel createFromParcel(Parcel in) {
@@ -25,6 +28,10 @@ public class ContactModel implements Parcelable {
         }
     };
 
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     protected ContactModel(Parcel in) {
         mFirstName = in.readString();
         mLastName = in.readString();
@@ -41,7 +48,10 @@ public class ContactModel implements Parcelable {
     public int describeContents() {
         return 0;
     }
-
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mFirstName);
@@ -51,6 +61,10 @@ public class ContactModel implements Parcelable {
         dest.writeString(mDateAdded);
     }
 
+    /*
+    *
+    * @author: darshan reddy
+    * */
     @Override
     public String toString() {
 
@@ -61,6 +75,10 @@ public class ContactModel implements Parcelable {
                 append(mDateAdded).toString();
     }
 
+    /*
+    *
+    * @author: darshan reddy
+    * */
     public boolean isEqual(ContactModel contactModel) {
         if (!this.mFirstName.equalsIgnoreCase(contactModel.getmFirstName())) {
             return false;
@@ -116,6 +134,10 @@ public class ContactModel implements Parcelable {
         return mDateAdded;
     }
 
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     public void setmDateAdded(String mDateAdded) {
         mDateAdded = mDateAdded.substring(mDateAdded.lastIndexOf(" "));
         String dateSplit[] = mDateAdded.split("/");

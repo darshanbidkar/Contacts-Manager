@@ -14,7 +14,7 @@ import contactmanager.hci.com.contactsmanager.R;
 import contactmanager.hci.com.contactsmanager.model.ContactModel;
 
 /**
- * Created by darshanbidkar on 3/20/16.
+ * Created by darshan bidkar and darshan reddy on 3/20/16.
  */
 public class ContactsAdapter extends ArrayAdapter<ContactModel> {
 
@@ -23,12 +23,18 @@ public class ContactsAdapter extends ArrayAdapter<ContactModel> {
         TextView mName;
         TextView mPhone;
     }
-
+    /*
+    *
+    * @author: darshan reddy
+    * */
     public ContactsAdapter(Context context, int resource, List objects) {
         super(context, resource, objects);
         this.context = context;
     }
-
+    /*
+    *
+    * @author: darshan bidkar
+    * */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ContactModel currentEntry = getItem(position);
